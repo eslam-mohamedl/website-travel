@@ -1,0 +1,766 @@
+/*start variable*/
+:root{
+    --lightRed: #f85959;
+    --darkGrey: #b22b2b2;
+    --lightGrey: #9b9b9b;
+    --aliceBlue: #f8faff;
+    --green: #8bc34b;
+    --curiousBlue: #4293fc;
+    --bunker: #222831;
+    --elephant: #2d333b;
+    --transition: all 0.5s ease;
+   }
+/*end variable */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+} 
+body{
+    font-family: "open sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+ul,
+li{
+    list-style:none;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*small screen*/
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/*medium screen*/
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/*large screen*/
+@media (min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+header{
+    background-image:url(../images/banner-header-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+header .overlay{
+  width:100%;
+  height:100vh;
+  background-color:rgb(0,0,0,0.35);
+}
+header .contant{
+    display: flex;
+    justify-content: space-between;
+}
+header .contant .logo a{
+   color:white;
+}
+header .contant .logo h2{
+    color:white;
+    padding:20px
+ }
+ header .contant .nav ul li{
+display: inline-block;
+padding:20px;
+color: white;
+
+ }
+ header .contant .nav ul li:hover{
+   color:var(--lightRed);
+   border-bottom: 2px solid #f85959;
+   padding-bottom: 10px;
+    
+     }
+ header .contant .nav ul button{
+    width: 110px;
+    height: 35px;
+    background: transparent;
+    color: white;
+    border: none;
+    border: 1px solid #ddd;
+    border-radius: 19px;
+    text-transform: capitalize;
+    transition: 0.7s;
+ }
+
+    header .contant .nav ul button:hover{
+      background-color: #f85959;
+      color: white;
+      border: 1px solid #f85959;
+      cursor: pointer;
+
+
+    }
+    header .title-header{
+        margin-top:40px;
+    }
+    header .title-header h2{
+        color: white;
+        font-size: 32px;
+        line-height: 39px;
+        padding-bottom: 20px;
+    }
+
+    header .title-header h2 span{
+     font-size: 20px;
+     
+    }
+    header .title-header p{
+        color: white;
+        padding-bottom: 20px;
+
+    }
+    header .form-header form{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header .form-header input{
+        width: 20%;
+        height: 60px;
+        text-indent: 12px;
+        font-size: 14px;
+        text-transform: capitalize;
+        border:none;
+    }
+    header .form-header select{
+        height: 60px;
+        width: 20%;
+        text-indent: 12px;
+        font-size: 14px;
+        color: #2d333bcc;
+        border: none;
+
+    }
+    header .form-header button{
+        width: 12%;
+        height: 60px;
+        color: white;
+        background: var(--lightRed);
+        border: none;
+        text-transform: capitalize;
+        margin-left: -4px;
+    }
+    header .text-header{
+        margin-top: 40px;
+    }
+    header .text-header p{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    header .text-header button{
+        font-size: 15px;
+    height: 40px;
+    border: none;
+    color: #333;
+    transition: 0.7s;
+    }
+   
+    header .text-header button:nth-child(2){
+        width: 12%;
+       
+        }
+        header .text-header button:nth-child(3){
+            width: 9%;
+           
+            }
+            header .text-header button:nth-child(4){
+                width: 9%;
+               
+                }
+                header .text-header button:last-child{
+                    width: 13%;
+                   
+                    }
+header .text-header button:hover{
+    background-color: #f85959;
+    color: white;
+    border: 1px solid #f85959;
+    cursor: pointer;
+
+
+}
+@media only screen and (max-width:575px)  {
+    header .contant .nav ul li{
+   display: none;
+    }
+    header .contant .nav ul button{
+        margin:20px 0;
+    }
+    header .form-header form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    header .form-header form input{
+        width:60%;
+        margin-top: 5px;
+
+    }
+    header .form-header form select{
+        width:60%;
+        margin-top: 5px;
+
+
+    }
+    header .form-header form button{
+        width:60%;
+        margin-top: 5px;
+        margin-left:0px;
+
+        
+    }
+    header .text-header button{
+        display: block;
+        width:60%;
+        padding:0 60px;
+        text-indent: -35px;
+    }
+}
+/***********************start about us******************/
+.about-us{
+    padding-top:80px;
+    padding-bottom: 100px;
+    background-color: #eee;
+}
+.about-us .about-contant{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(21%,1fr));
+    grid-gap: 4%;
+   
+}
+.about-us p{
+    padding-bottom: 20px;
+    color: var(--lightGrey);}
+.about-us h2{
+    margin-bottom: 35px;
+    font-size: 21px;
+
+}
+.about-us .about-contant .card{
+    text-align: center;
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+
+}
+.about-us .about-contant .card:hover{
+color: white;
+background-color: var(--lightRed);
+cursor: pointer;
+}
+
+.about-us .about-contant .card h3{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.about-us .about-contant .card p{
+    line-height: 28px;
+    padding: 0 15px;
+    margin-top: 8px;
+    color: #333;
+}
+.about-us .about-contant .card p:hover{
+    color: white;
+}
+@media (max-width:992px) and (min-width:576px)  {
+    .about-us .about-contant{
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(46%,1fr));
+        grid-gap: 4%;
+       
+    }
+}
+@media only screen and (max-width:575px)  {
+    .about-us .about-contant{
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(80%,1fr));
+        grid-gap: 4%;
+       
+    }
+}
+/***********************end about us******************/
+/***********************start Featured***************/
+.Featured{
+    padding-top:120px;
+    padding-bottom: 120px;
+} 
+.Featured p{
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #666;
+}
+.Featured h2{
+    
+    margin-bottom: 60px;
+    font-size: 27px;
+
+}
+.Featured .featured-contant{
+    display: grid;
+    grid-template-columns:repeat(1 ,100%);
+}
+.Featured .featured-contant .feat img{
+    width:100%;
+    
+}
+.Featured .featured-contant .feat h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.Featured .featured-contant .feat p{
+    font-size: 16px;
+
+}
+@media (max-width:992px) and (min-width:576px)  {
+    .Featured .featured-contant{
+        display: grid;
+        grid-template-columns:repeat(2 ,47%);
+        grid-gap: 3%;
+    }
+}
+@media only screen and (max-width:575px)  {
+    .Featured .featured-contant{
+        display: grid;
+        grid-template-columns:repeat(1,100%);
+    }
+    .Featured{
+        padding-top:120px;
+        padding-bottom: 120px;
+    } 
+}
+/***********************end Featured***************/
+/************************start tour*************************/
+.tour{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #eee;
+    overflow: hidden;
+
+}
+.tour .tour-contant{
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    grid-gap: 2%;
+}
+.tour p{
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #666;
+}
+.tour h2{
+    margin-bottom: 60px;
+    font-size: 27px;
+}
+.tour .tour-contant .card{
+    margin:40px 0;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+.tour .tour-contant .card img{
+width:100%;
+
+}
+.tour .tour-contant .card .text{
+    display: flex;
+    justify-content: space-between;
+    padding:20px 0;
+}
+.tour .tour-contant .card .text h3{
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+}
+.tour .tour-contant .card .text >  p{
+    color:var(--curiousBlue);
+    font-size: 20px;
+}
+.tour .tour-contant .card .text-mediam  h6{
+    padding-bottom: 20px;
+    font-weight: normal;
+    font-size: 13px;
+}
+.tour .tour-contant .card .text-mediam p  {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #333;
+    line-height: 26px;
+    padding:7px 0;
+}
+.tour .tour-contant .card .text-mediam p:last-of-type{
+    border-bottom: 1px solid #777;
+
+}
+.tour  .card  .text-footer{
+display: flex;
+justify-content: space-between;
+}
+.tour  .card  .text-footer h3{
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+}
+.tour .card  .text-footer button{
+    width: 40%;
+    height: 25px;
+    border: none;
+    background: var(--green);
+    color: white;
+    border-radius: 5px;
+
+}
+
+@media (max-width:992px) and (min-width:576px)  {
+    .tour .tour-contant{
+        display: grid;
+        grid-template-columns: repeat(2,46%);
+        grid-gap: 4%;
+    }
+    .tour .tour-contant .card{
+        margin:0px 0;
+        padding-bottom: 0px;
+
+    }
+}
+@media only screen and (max-width:575px)  {
+    .tour .tour-contant{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        
+    }
+    .tour .tour-contant .card{
+        margin:0px 0;
+        padding-bottom: 0px;
+
+    }
+}
+}
+   
+   
+/************************end tour*************************/
+/************************start background*************************/
+.background{
+  
+    background-image: url(../images/banner-header-img.jpg);
+    height: auto;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+.background .overlay{
+    width:100%;
+    height:100%;
+    background: linear-gradient(rgba(88, 209, 178, 0.8), rgba(88, 209, 178, 0.8)), url("../images/banner-header-img.jpg") center/cover no-repeat;
+    height:auto;
+}
+.background .back-contant{
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
+       padding-top: 70px;
+       padding-bottom:80px;
+}
+.background .overlay p{
+    color: #ddd;
+    text-align: center;
+
+}
+
+.background .overlay h2{
+    padding: 50px 0 24px 0;
+    font-size: 31px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+
+
+}
+.background .back-contant .text p{
+    font-size: 39px;
+    color: white;
+}
+.background .back-contant .text h2{
+    font-size: 17px;
+    font-weight: normal;
+    padding-top: 25px;color: #fff;
+}
+
+@media (max-width:992px) and (min-width:576px)  {
+    .background .back-contant{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
+        padding-top: 70px;
+        padding-bottom:80px;
+ }
+}
+@media only screen and (max-width:575px)  {
+    .background .back-contant{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%,1fr));
+        padding-top: 70px;
+        padding-bottom:80px;
+ }
+}
+
+
+/************************end background*************************/
+
+/************************statt Subscribe*************************/
+.Subscribe{
+    padding-top: 80px;
+    padding-bottom:80px;
+    text-align: center;
+    background-image: linear-gradient(45deg, #32c0c3 0%, #5cddb6 100%);
+    color: white;
+}
+.Subscribe .text h1{
+    font-size: 35px;
+    font-weight: normal;
+}
+.Subscribe .text p{
+    
+    padding: 17px;
+    max-width: 75%;
+    text-align: center;
+    margin: 10px auto;
+    line-height: 30px;
+    color: #eee;
+
+
+}
+.Subscribe .text form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Subscribe .text form input{
+    height: 55px;
+    width: 19%;
+    text-indent: 20px;
+    text-transform: capitalize;
+    border: none;
+    background: transparent;
+    border: 1px solid #fff;
+    color: white;
+}
+.Subscribe .text form button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: white;
+    width: 10%;
+    height: 55px;
+}
+@media only screen and (max-width:575px)  {
+    .Subscribe .text form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Subscribe .text form input{
+        height: 55px;
+        width: 60%;
+        ;
+    }
+    .Subscribe .text form button{
+        
+        width:60%;
+        height: 55px;
+    }
+    
+}
+ /************************end Subscribe*************************/
+
+  /************************start testmoials*************************/
+.testmoials{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #eee;
+}
+
+.testmoials .test-contant {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(47%,1fr));
+    grid-gap: 3%;
+}
+.testmoials .test-left p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #888;
+    padding-bottom: 20px;
+}
+.testmoials .test-left h2{
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+.testmoials .test-left p:last-of-type{
+    color: #333;
+    line-height: 28px;}
+.testmoials .test-left span{
+    line-height: 26px;
+    font-size: 16px;
+}
+.testmoials .test-left button{
+    width: 140px;
+    height: 40px;
+    border: 1px solid var(--lightRed);
+    background: transparent;
+    color: var(--lightRed);
+    border-radius: 20px;
+    margin-top: 30px;
+    display: block;
+}
+.testmoials .test-left button:hover{
+    background: var(--lightRed);
+    color: white;
+    cursor: pointer;
+}
+
+.testmoials .text-right p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #888;
+    padding-bottom: 20px;
+}
+.testmoials .text-right h2{
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+.testmoials .text-right .team {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-gap: 5%;
+    margin-bottom: 30px;
+    background: #fff;
+}
+.testmoials .text-right .team span{
+    width:100%;
+
+}
+.testmoials .text-right .team span img{
+    width: 100%;
+    border-radius: 50%;
+    margin: 23px 10px;
+}
+.testmoials .text-right .team  p:first-of-type{
+    line-height: 24px;
+    padding: 20px 12px;
+    color: #333;
+
+    
+    
+}
+  .testmoials .text-right .team  p:last-of-type{
+    margin-left: 3px;
+    color: #333;
+    padding: 10px;
+}
+.testmoials .text-right .team  span:last-of-type{
+}
+@media (max-width:992px) and (min-width:576px)  {
+    .testmoials .test-contant {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(47%,1fr));
+        grid-gap: 3%;
+    }
+}
+@media only screen and (max-width:575px)  {
+    .testmoials .test-contant {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
+    }
+}
+   
+   /************************end testmoials*************************/
+/********************start footer***************/
+footer{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: var(--bunker);
+    color: #fff;
+}
+footer .foot-contant{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(25%,1fr));
+}
+footer .foot-contant .foot{
+
+    padding-bottom: 40px;
+}
+footer .foot-contant .foot h3{
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+footer .foot-contant .foot p{
+    line-height: 24px;
+    padding: 0 25px 0 0;
+    font-size: 14px;
+}
+footer .foot-contant .foot ul{
+    
+}
+footer .foot-contant .foot ul li{
+    line-height: 33px;
+    color: #eee;
+}
+
+footer .icons span a i{
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+    transition: 0.7s;
+
+}
+footer .icons span a i:hover{
+    transform: scale(1.8);
+    transform: rotate(360deg);
+}
+@media (max-width:992px) and (min-width:576px)  {
+    footer .foot-contant{
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+    }
+}
+@media only screen and (max-width:575px)  {
+    footer .foot-contant{
+        display: grid;
+        text-align: center;
+
+        grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
+    }
+    footer .icons{
+        text-align: center;
+    }
+}
+/********************end footer***************/
+
